@@ -1,0 +1,11 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-bg text-ink font-sans antialiased}h1,h2,h3{@apply font-head font-medium text-brand tracking-tight}
+h1{@apply text-5xl md:text-7xl leading-[1.02]}h2{@apply text-4xl md:text-5xl leading-tight}
+:focus-visible{outline:2px solid #F2C14E;outline-offset:2px}
+.btn{@apply inline-flex items-center justify-center gap-2 bg-gold px-8 py-4 text-xs font-semibold uppercase tracking-[.2em] text-deep transition hover:bg-soft min-h-[48px]}
+.btn2{@apply inline-flex items-center justify-center border border-current px-8 py-4 text-xs font-semibold uppercase tracking-[.2em] text-brand transition hover:bg-gold hover:text-deep hover:border-gold min-h-[48px]}
+.eyebrow{@apply text-xs uppercase tracking-[.3em] text-gold}
+.inp{@apply w-full rounded-xl border border-line bg-white px-4 py-3 min-h-[48px] outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20}
+.card{@apply border border-line bg-white p-6}
+.err{@apply text-sm text-red-600 mt-1}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
