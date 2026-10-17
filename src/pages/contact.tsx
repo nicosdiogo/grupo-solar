@@ -1,5 +1,5 @@
-import {useState} from "react";import {Link} from "react-router-dom";import {AnimatePresence,motion} from "framer-motion";import {Phone,Mail,Clock,MapPin,Instagram,Facebook,Linkedin} from "lucide-react";import {hotels} from "../data/content";import {IMG} from "../data/media";import {CONTACTS} from "../data/config";import {Cine,Img} from "../components/ui";import ContactForm from "../components/Form";
-export function Contact(){const [h,setH]=useState("costa-hotel-ii");
+import {useState} from "react";import {Link} from "react-router-dom";import {AnimatePresence,motion} from "framer-motion";import {Phone,Mail,Clock,MapPin,Instagram,Facebook,Linkedin} from "lucide-react";import {hotels} from "../data/content";import {IMG} from "../data/media";import {CONTACTS} from "../data/config";import {useHotelCtx} from "../hooks/hotelContext";import {Cine,Img} from "../components/ui";import ContactForm from "../components/Form";
+export function Contact(){const [h,setH]=useState(useHotelCtx().hotel||"costa-hotel-ii");
 return <><Cine img={IMG.misc[3]} h="min-h-[48vh]" eyebrow="Fale connosco" title="Vamos conversar"/>
 <section className="relative z-10 -mt-24 px-4 pb-20"><div className="mx-auto grid max-w-6xl overflow-hidden shadow-2xl lg:grid-cols-[2fr_3fr]">
 <div className="bg-deep p-8 text-white md:p-12"><p className="eyebrow">Unidades</p><h2 className="mt-2 !text-4xl !text-white">Escolha com quem quer falar</h2>

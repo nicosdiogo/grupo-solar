@@ -22,12 +22,12 @@ const D:Record<string,Doc>={
 ["Lei aplicável",["Estes termos regem-se pela lei angolana, a confirmar por jurista antes da publicação."]]]},
 "Política de cookies":{eyebrow:"Armazenamento e serviços externos",img:0,s:[
 ["O que são cookies",["Cookies são pequenos ficheiros guardados no seu dispositivo quando visita um website, usados para lembrar preferências ou medir a utilização."]],
-["O que usamos",["Este website não utiliza cookies analíticos nem publicitários e não faz rastreamento. Não é necessário banner de consentimento para o funcionamento actual."]],
+["O que usamos",["Este website não utiliza cookies analíticos nem publicitários e não faz rastreamento. Guarda apenas, no armazenamento local do seu navegador, a unidade hoteleira que escolheu, para personalizar a navegação. Nada é enviado para servidores."]],
 ["Categorias","TABLE"],
 ["Serviços externos",["Ao carregar o site, o seu navegador pede recursos a serviços de terceiros: tipos de letra (Google Fonts) e fotografias ilustrativas (Unsplash). Esses serviços podem registar o seu endereço IP e dados técnicos do pedido.","Para produção, recomenda-se alojar localmente os tipos de letra e as imagens, eliminando estas transferências."]],
 ["Como gerir",["Pode apagar ou bloquear cookies nas definições do seu navegador. Bloquear recursos externos pode alterar o aspecto do website."]],
 ["Alterações",["Se vierem a ser usadas novas tecnologias, esta política será actualizada e, quando necessário, será pedido o seu consentimento."]]]}};
-const T=[["Essenciais","Funcionamento do website","Não utilizados"],["Preferências","Lembrar idioma ou definições","Não utilizados"],["Analíticos","Medir visitas","Não utilizados"],["Publicitários","Anúncios personalizados","Não utilizados"]];
+const T=[["Essenciais","Funcionamento do website","Não utilizados"],["Preferências","Lembrar a unidade escolhida (armazenamento local)","Utilizado"],["Analíticos","Medir visitas","Não utilizados"],["Publicitários","Anúncios personalizados","Não utilizados"]];
 export function Legal({t}:{t:string}){const d=D[t];
 return <><Hero img={IMG.misc[d.img]} h="min-h-[42vh]" eyebrow={d.eyebrow} title={t}/><W><div className="grid gap-12 lg:grid-cols-[15rem_1fr]"><nav aria-label="Índice" className="lg:sticky lg:top-24 lg:h-fit"><p className="eyebrow mb-3">Índice</p><ol className="space-y-2 text-sm">{d.s.map(([h],i)=><li key={h}><a href={`#s${i}`} className="text-mute transition hover:text-brand">{i+1}. {h}</a></li>)}</ol></nav>
 <article className="max-w-3xl"><p className="border-l-4 border-gold bg-white p-4 text-sm text-mute">Documento demonstrativo. Última actualização: 15 de Outubro de 2026. Deve ser revisto por um jurista antes da publicação.</p>
